@@ -1,0 +1,96 @@
+.top {
+  position: fixed;
+  width: 100%;
+  height: 50%;
+  top: 0rpx;
+  background-color: tomato;
+}
+
+.img_top {
+  position: fixed;
+  width: 100%;
+  height: 50%;
+  top: 0rpx;
+}
+
+.logo {
+  position: fixed;
+  left: 30rpx;
+  top: 40rpx;
+}
+
+.img_logo {
+  width: 300rpx;
+  height: 100rpx;
+}
+
+.main {
+  background-color: #AAA7;
+  height: 400rpx;
+  width: 94%;
+  border-radius: 10px;
+  margin: 300rpx auto;
+  position: relative;
+}
+
+.title {
+  color: white;
+  position: absolute;
+  top: 20rpx;
+  left: 50rpx;
+}
+
+.out {
+  position: relative;
+  top: 80rpx;
+}
+
+.content {
+  color: white;
+  font-size: 30rpx;
+  margin: 0rpx 50rpx;
+}
+
+.box {
+  position: absolute;
+  bottom: 10rpx;
+  width: 100%;
+}
+
+.gridview {
+  height: 130rpx;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.gridview-item {
+  margin: 1%;
+  width: 30%;
+  height: 100rpx;
+  float: left;
+  font-size: 30rpx;
+  color: #FFF;
+  background: #AAA7;
+  position: relative;
+  margin-left: 15rpx;
+}
+
+.img {
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  left: 70rpx;
+}
+
+.in {
+  position: absolute;
+  bottom: 0rpx;
+  left: 48rpx;
+}
+
+page {
+  background-image: url('http://47.101.147.253:4004/uploads/main-back.jpg');
+  width: 100%;
+  height: 35%;
+  background-size: 100% 100%;
+}

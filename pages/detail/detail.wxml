@@ -1,0 +1,59 @@
+<!--pages/detail/detail.wxml-->
+<view class="inaver _30f2b4d" style="background:{{background}};color:{{getColor}}">
+	<!--返回按钮-->
+	<view class="left _30f2b4d" catchtap="goBack" style="position:absolute;top:120rpx;left:50rpx">
+		<image class="icon _30f2b4d" src="../../images/back.png" />
+	</view>
+
+	<!--首页按钮-->
+	<view class="left _30f2b4d" catchtap="goHome" style="position:absolute;top:130rpx;right:50rpx">
+		<image class="icon _30f2b4d" src="../../images/home.png" />
+	</view>
+
+	<view class="center _30f2b4d">
+		<!-- 自定义区域 -->
+
+	</view>
+	<view class="right _30f2b4d">
+		<!-- 保护右上角胶囊不被污染 -->
+	</view>
+</view>
+<view class="protect-inaver _30f2b4d">
+	<!-- 占据顶部位置， 伪padding板块 -->
+</view>
+<view class="top">
+	<image class="img_top" src="{{img_detail_tp}}">
+	</image>
+</view>
+
+<!-- logo -->
+<view class="logo">
+	<image class="img_logo" src="/images/logo.png">
+	</image>
+</view>
+<!-- logo-end -->
+<view class="main">
+	<view class="title">材料名称</view>
+	<view class="out">
+		<block wx:for="{{items}}" wx:key="*this">
+			<view class="content">{{item.name}}</view>
+		</block>
+	</view>
+
+	<view class="box">
+		<scroll-view class='gridview' scroll-y='true'>
+			<view class='gridview-item' bindtap="tapfavourite">
+				<image class="img" src="/images/favourite.png"></image>
+				<view class="in">点击收藏</view>
+			</view>
+			<view class='gridview-item' bindtap="tapshop">
+				<image class="img" src="/images/shop.png"></image>
+				<view class="in">加入待选</view>
+			</view>
+			<view class='gridview-item' bindtap="tapshow">
+				<image class="img" src="/images/show.png"></image>
+				<view class="in">场景演示</view>
+			</view>
+		</scroll-view>
+	</view>
+</view>

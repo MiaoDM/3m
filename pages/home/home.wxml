@@ -1,0 +1,72 @@
+<!--pages/home/home.wxml-->
+<view class="inaver _30f2b4d" style="background:{{background}};color:{{getColor}}">
+	<!--返回按钮-->
+	<view class="left _30f2b4d" catchtap="goBack" style="position:absolute;top:120rpx;left:50rpx">
+		<image class="icon _30f2b4d" src="../../images/back.png" />
+	</view>
+
+	<!--首页按钮-->
+	<view class="left _30f2b4d" catchtap="goHome" style="position:absolute;top:130rpx;right:50rpx">
+		<image class="icon _30f2b4d" src="../../images/home.png" />
+	</view>
+
+	<view class="center _30f2b4d">
+		<!-- 自定义区域 -->
+
+	</view>
+	<view class="right _30f2b4d">
+		<!-- 保护右上角胶囊不被污染 -->
+	</view>
+</view>
+<view class="protect-inaver _30f2b4d">
+	<!-- 占据顶部位置， 伪padding板块 -->
+</view>
+<!-- logo -->
+<view class="logo">
+	<image class="img_logo" src="../../images/logo.png">
+	</image>
+</view>
+<!-- logo-end -->
+
+
+<view class="title" bindtap="login">个人主页</view>
+
+<view class="userinfo" style="margin-top: 5%;">
+	<view class="userinfo-avatar">
+		<open-data type="userAvatarUrl"></open-data>
+	</view>
+
+	<view class="userinfo-text">
+		<open-data type="userNickName"></open-data>
+	</view>
+	<image class='userinfo-bg' src='../../images/home-bk.jpg'></image>
+</view>
+
+<view class="section" style="margin-top: 3%;">
+	<view class="tui-table-view">
+		<view class="tui-col-3" bindtap="checking">
+			<icon class="iconfont icon-shouye"></icon>
+			<view class="viewStyle">审核中</view>
+		</view>
+		<view class="tui-col-3" bindtap="logistics">
+			<icon class="iconfont icon-xinfeng"></icon>
+			<view class="viewStyle">物流信息</view>
+		</view>
+		<view class="tui-col-3" bindtap="customservice">
+			<icon class="iconfont icon-duihuaxinxi"></icon>
+			<view class="viewStyle">联系客服</view>
+		</view>
+		<view class="tui-col-3" bindtap="address">
+			<icon class="iconfont icon-dibiao"></icon>
+			<view class="viewStyle">地址管理</view>
+		</view>
+		<view class="tui-col-3" bindtap="collect">
+			<icon type="collect" size='30'></icon>
+			<view class="viewStyle">收藏库</view>
+		</view>
+		<view class="tui-col-3" bindtap="feedback">
+			<icon class="iconfont icon-dianhua"></icon>
+			<view class="viewStyle">意见反馈</view>
+		</view>
+	</view>
+</view>

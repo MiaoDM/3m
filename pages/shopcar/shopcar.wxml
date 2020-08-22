@@ -1,0 +1,42 @@
+<!-- 主容器 -->
+<view class="inaver _30f2b4d" style="background:{{background}};color:{{getColor}}">
+	<!--返回按钮-->
+	<view class="left _30f2b4d" catchtap="goBack" style="position:absolute;top:120rpx;left:50rpx">
+		<image class="icon _30f2b4d" src="../../images/back.png" />
+	</view>
+
+	<!--首页按钮-->
+	<view class="left _30f2b4d" catchtap="goHome" style="position:absolute;top:130rpx;right:50rpx">
+		<image class="icon _30f2b4d" src="../../images/home.png" />
+	</view>
+
+	<view class="center _30f2b4d">
+		<!-- 自定义区域 -->
+
+	</view>
+	<view class="right _30f2b4d">
+		<!-- 保护右上角胶囊不被污染 -->
+	</view>
+</view>
+<view class="protect-inaver _30f2b4d">
+	<!-- 占据顶部位置， 伪padding板块 -->
+</view>
+<!-- logo -->
+<view class="logo">
+	<image class="img_logo" src="/images/logo.png">
+	</image>
+</view>
+<!-- logo-end -->
+<view class="title">待选商品</view>
+<view class="out">
+<image class="img" src="http://47.101.147.253:2000/uploads/p1.jpg"></image>
+<label class="name">lalalalal</label>
+	<view class="stepper">
+		<!-- 减号 -->
+		<text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+		<!-- 数值 -->
+		<input type="number" bindchange="bindManual" value="{{num}}" />
+		<!-- 加号 -->
+		<text class="normal" bindtap="bindPlus">+</text>
+	</view>
+</view>

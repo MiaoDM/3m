@@ -1,0 +1,69 @@
+<!--pages/address/address.wxml-->
+
+
+<view class="inaver _30f2b4d" style="background:{{background}};color:{{getColor}}">
+	<!--返回按钮-->
+	<view class="left _30f2b4d" catchtap="goBack" style="position:absolute;top:120rpx;left:50rpx">
+		<image class="icon _30f2b4d" src="../../images/back.png" />
+	</view>
+
+	<!--首页按钮-->
+	<view class="left _30f2b4d" catchtap="goHome" style="position:absolute;top:130rpx;right:50rpx">
+		<image class="icon _30f2b4d" src="../../images/home.png" />
+	</view>
+
+	<view class="center _30f2b4d">
+		<!-- 自定义区域 -->
+
+	</view>
+	<view class="right _30f2b4d">
+		<!-- 保护右上角胶囊不被污染 -->
+	</view>
+</view>
+<view class="protect-inaver _30f2b4d">
+	<!-- 占据顶部位置， 伪padding板块 -->
+</view>
+
+
+
+<view class="info" style="margin-top: 5%;">
+
+	<view class="title">地址管理</view>
+
+	<view class="row">
+		<image class="pic" src="../../images/person.png"></image>
+		<!--输入账号-->
+		<input class="input" type="number" placeholder="姓名" bindinput="idInput"></input>
+	</view>
+	<view class="row">
+		<image class="pic" src="../../images/person.png"></image>
+		<!--输入密码-->
+		<input class="input" placeholder="电话" bindinput="passwordInput"></input>
+	</view>
+
+	<view class="row">
+		<image class="pic" src="../../images/person.png"></image>
+		<!--输入邮箱-->
+		<input class="input" placeholder="邮箱" bindinput="passwordInput"></input>
+	</view>
+
+	<view class="row">
+		<image class="pic" src="../../images/person.png"></image>
+		<!--输入公司-->
+		<input class="input" placeholder="公司" bindinput="passwordInput"></input>
+	</view>
+	<view class="row">
+		<view class="text" bindtap="chooseAddress">{{province == ''?'选择省市区':province + '-' + city + '-' + area}}</view>
+	</view>
+	<view class="row">
+		<image class="pic" src="../../images/person.png"></image>
+		<!--输入地址-->
+		<input class="input" placeholder="详细地址" bindinput="passwordInput"></input>
+	</view>
+	<view class="text" bindtap="login">确定</view>
+
+</view>
+
+
+<nyz_area_picker show="{{show}}" bind:sureSelectArea="sureSelectAreaListener">
+</nyz_area_picker>

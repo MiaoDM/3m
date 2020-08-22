@@ -1,0 +1,410 @@
+/**index.wxss**/
+/* search-start  */
+.search-first-position {
+  position: fixed;
+  right: 60rpx;
+  top: 140rpx;
+  z-index: 1;
+}
+
+.img-search-first {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.search-second-position {
+  position: fixed;
+  right: 40rpx;
+  top: 140rpx;
+  z-index: 1;
+  width: 500rpx;
+  height: 80rpx;
+  border-radius: 10px;
+  background-color: #1117;
+}
+
+.text {
+  margin-left: 20rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input-search {
+  color: white;
+}
+
+.pic {
+  position: fixed;
+  right: 60rpx;
+  top: 140rpx;
+  z-index: 2;
+}
+
+.img-search-second {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+/* search-end */
+.page_bg {
+  width: 100%;
+  height: 55%;
+}
+
+
+page {
+  background-image: url('http://47.101.147.253:4004/uploads/main-back.jpg');
+  width: 100%;
+  height: 35%;
+  background-size: 100% 100%;
+}
+
+.swiper-item-images {
+  width: 100%;
+  height: 100%;
+}
+
+.out {
+  width: 94%;
+  height: 55%;
+  position: absolute;
+  background-color: #AAA7;
+  border-radius: 5px;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.in1 {
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  border-radius: 5px;
+  top: 3px;
+  right: 3px;
+}
+
+.in2 {
+  width: 160rpx;
+  height: 45rpx;
+  position: absolute;
+  border-radius: 5px;
+  bottom: 0rpx;
+  right: 0rpx;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.img {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+/* //悬浮按钮 */
+.buttom {
+  width: 80rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  margin-top: 40rpx;
+  position: fixed;
+  bottom: 10%;
+  left: -40rpx;
+  z-index: 1001;
+}
+
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+
+.swiper-wrapper {
+  position: absolute;
+  z-index: 2;
+}
+
+.container_coupon {
+  position: absolute;
+  z-index: 1;
+}
+
+.gridview {
+  margin: 5rpx 10rpx 5rpx 10rpx;
+  height: 450rpx;
+  margin-top: 50rpt;
+
+}
+
+.gridview-item {
+  margin: 3rpx;
+  width: 330rpx;
+  float: left;
+  font-size: 35rpx;
+  color: #FFF;
+  background: #111A;
+}
+
+
+.swiperItem1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: unset;
+  border-radius: 10px;
+  z-index: 0.5;
+}
+
+.swiperItemActive1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: unset;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.imageItem1 {
+  height: 510rpx;
+  width: 510rpx;
+  border-radius: 10rpx;
+  margin: 30rpx 0rpx;
+  /* opacity: 0.5; */
+}
+
+.active1 {
+  transform: scale(1.14);
+  border-radius: 5px;
+  transition: all 0.2s ease-in 0s;
+  /* opacity: 1; */
+}
+
+/*更改swiper指示点的样式---开始*/
+.swiper-box .wx-swiper-dots.wx-swiper-dots-horizontal {
+  margin-bottom: 2rpx;
+}
+
+.swiper-box .wx-swiper-dot {
+  width: 80rpx;
+  display: inline-flex;
+  height: 10rpx;
+  margin-left: 20rpx;
+  justify-content: space-between;
+}
+
+.swiper-box .wx-swiper-dot::before {
+  content: '';
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8rpx
+}
+
+.swiper-box .wx-swiper-dot-active::before {
+  background: rgba(244, 0, 0, 0.8);
+}
+
+.wx-swiper-dots.wx-swiper-dots-horizontal {
+  bottom: 10rpx;
+}
+
+/*更改swiper指示点的样式---结束*/
+
+
+
+.swiper-wrapper {
+  flex: 1;
+  width: 750rpx;
+  padding-top: 2rpx;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 2;
+}
+
+swiper {
+  width: 750rpx;
+  height: 400rpx;
+}
+
+.swiper-item {
+  height: 400rpx;
+  display: flex;
+  align-items: center;
+}
+
+.swiper-item image {
+  width: 448rpx;
+  height: 250rpx;
+  margin: 0 auto;
+  border-radius: 20rpx;
+  transition: all 0.6s;
+}
+
+.swiper-item-active image {
+  width: 560rpx;
+  height: 300rpx;
+  transition: all 0.6s;
+}
+
+
+/*全局悬浮菜单----开始*/
+
+.tui-table-view {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 94%;
+  margin-left: 3%;
+  margin-right: 3%;
+  border-radius: 3px;
+  background-color: #222D;
+  position: absolute;
+  bottom: 5%;
+}
+
+.tui-col-5 {
+  flex: 0 0 auto;
+  width: 20%;
+  text-align: center;
+  color: #797979;
+  padding: 40rpx 0;
+  font-size: 30rpx;
+}
+
+.img2 {
+  width: 60rpx;
+  height: 60rpx;
+
+}
+
+.viewStyle {
+  font-size: 25rpx;
+  color: white;
+}
+
+/*全局悬浮菜单----结束*/
+
+/* 下面是菜单点击的效果---开始 */
+.menuHover {
+  flex: 0 0 auto;
+  width: 20%;
+  text-align: center;
+  color: #797979;
+  padding: 40rpx 0;
+  font-size: 30rpx;
+  background-color: rgb(171, 175, 171);
+}
+
+/* 下面是菜单点击的效果 ---结束*/
+
+
+/* 下面是授权页面的效果---开始 */
+.header {
+  margin: 90rpx 0 90rpx 50rpx;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  width: 650rpx;
+  height: 300rpx;
+  line-height: 450rpx;
+}
+
+.header image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.content {
+  margin-left: 50rpx;
+  margin-bottom: 90rpx;
+}
+
+.content text {
+  display: block;
+  color: #9d9d9d;
+  margin-top: 40rpx;
+}
+
+.bottom2 {
+  border-radius: 80rpx;
+  margin: 70rpx 50rpx;
+  font-size: 35rpx;
+}
+
+/* side-satrt */
+.side-out {
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  right: 0rpx;
+  z-index: 3;
+  /* background-color: #f0f7; */
+}
+
+.side {
+  width: 40%;
+  height: 100%;
+  position: fixed;
+  right: 0rpx;
+  background-color: #1117;
+  z-index: 3;
+}
+
+.close-side {
+  z-index: 4;
+  position: absolute;
+  top: 40%;
+  right: 264rpx;
+}
+
+.img-close-side {
+  width: 81rpx;
+  height: 81rpx;
+}
+
+.side-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 150rpx;
+
+}
+
+.side-item {
+  background-color: #aaa7;
+  width: 80%;
+  height: 50rpx;
+  border-radius: 3px;
+  margin: 0 auto;
+  margin-bottom: 15rpx;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lab {
+  color: white;
+  margin-right: 20rpx;
+  font-size: small;
+}
+
+/* side-end */

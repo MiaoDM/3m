@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/home/home",
+    "pages/address/address",
+    "pages/check/check",
+    "pages/customservice/customservice",
+    "pages/feedback/feedback",
+    "pages/logistics/logistics",
+    "pages/register/register",
+    "pages/collect/collect",
+    "pages/scene/scene",
+    "pages/shopcar/shopcar"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

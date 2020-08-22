@@ -1,0 +1,108 @@
+<!--index.wxml-->
+<!-- search-start -->
+<view class="search-first-position {{showImgSearch?'show':'hide'}}" bindtap="searchFirst">
+	<image class="img-search-first" src="/images/search.png"></image>
+</view>
+<view class="search-second-position {{showImgSearch?'hide':'show'}}">
+	<view class="text">
+		<input class="input-search" placeholder="输入搜索内容"></input>
+	</view>
+	<view class="pic" bindtap="searchSecond">
+		<image class="img-search-second" src="/images/search.png"></image>
+	</view>
+</view>
+<!-- search-end -->
+<view wx:if="{{isHide}}">
+	<view wx:if="{{canIUse}}">
+		<view class='header'>
+			<image src='../../images/wx_login.png'></image>
+		</view>
+
+		<view class='content'>
+			<view>3M DI-NOC 申请获取以下权限</view>
+			<text>获得你的公开信息(昵称，头像等)</text>
+		</view>
+
+		<button class='bottom2' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+			授权登录
+		</button>
+	</view>
+	<view wx:else>请升级微信版本</view>
+</view>
+
+<view wx:else>
+	<!-- side-start  -->
+	<view class="side-out {{showSampleList?'hide':'show'}}">
+		<view class="side ">
+			<view class="side-box">
+				<view class="side-item" wx:for="{{sample_list}}" wx:key="{{index}}" bindtap="tapsub" data-flag="{{item.id}}">
+					<label class="lab">
+						{{item.name}}
+					</label>
+				</view>
+			</view>
+		</view>
+		<view class="close-side" bindtap="tapCloce">
+			<image src="/images/close_side.png" class="img-close-side"></image>
+		</view>
+	</view>
+	<!-- side-end -->
+
+	<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" style="height:{{Hei}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px" circular="{{true}}" class="swiper-box">
+		<block wx:for='{{banner_list}}' wx:key='index'>
+			<swiper-item>
+				<image src='{{item.image}}' class='swiper-item-images' />
+			</swiper-item>
+		</block>
+	</swiper>
+
+	<view class="out" style="margin-top: 5%;">
+		<view class="swiper-wrapper">
+			<swiper style="display: flex;flex-direction: column;justify-content: center;align-items: center;overflow:unset;width:94%;height:510rpx;margin-top:60rpx;" bindchange="changeSwiper1" previous-margin="150rpx" next-margin="150rpx" indicator-dots="{{false}}" indicator-color="rgba(221,0,34,.3)" class="swiper-box">
+				<block wx:for="{{posterList}}" wx:key>
+					<swiper-item class=" {{currentIndex1 == index ? 'swiperItemActive1': 'swiperItem1'}}">
+						<image bindtap="tapdetail" data-flag="{{item}}" mode="aspectFill" src='{{item.url}}' class="imageItem1 {{currentIndex1 == index ? 'active1': ''}}"> </image>
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
+
+
+		<!--右下角图标-->
+		<view class="in2  {{showSampleList?'show':'hide'}}" bindtap="selectSample">
+			<image class="img" src="../../images/select.jpg"></image>
+		</view>
+
+	</view>
+
+
+
+	<!--隐藏式菜单-->
+	<view class="container {{showMenu?'show':'hide'}}">
+		<view class="tui-table-view">
+			<view class='tui-col-5' bindtap="tapshow" hover-class="menuHover">
+				<image class="img2" src="/images/residence.png"></image>
+				<view class="viewStyle">走进DI-NOC</view>
+			</view>
+			<view class='tui-col-5' bindtap="index" hover-class="menuHover">
+				<image class="img2" src="/images/design.png"></image>
+				<view class="viewStyle">设计之选</view>
+			</view>
+			<view class='tui-col-5' bindtap="scene" hover-class="menuHover">
+				<image class="img2" src="/images/real.png"></image>
+				<view class="viewStyle">场景演示</view>
+			</view>
+			<view class='tui-col-5' bindtap="shopcar" hover-class="menuHover">
+				<image class="img2" src="/images/apply.png"></image>
+				<view class="viewStyle">花色申领</view>
+			</view>
+			<view class='tui-col-5' bindtap="home" hover-class="menuHover">
+				<image class="img2" src="/images/person.png"></image>
+				<view class="viewStyle">个人主页</view>
+			</view>
+		</view>
+	</view>
+
+	<image src="../../images/menu.png" class="buttom" animation="{{animMain}}" bindtap="showOrHide">
+	</image>
+</view>
