@@ -18,6 +18,7 @@
 			<image src='../../images/wx_login.png'></image>
 		</view>
 
+
 		<view class='content'>
 			<view>3M DI-NOC 申请获取以下权限</view>
 			<text>获得你的公开信息(昵称，头像等)</text>
@@ -31,6 +32,13 @@
 </view>
 
 <view wx:else>
+
+	<!-- logo -->
+	<view class="logo">
+		<image class="img_logo" src="/images/logo.png">
+		</image>
+	</view>
+<!-- logo-end -->
 	<!-- side-start  -->
 	<view class="side-out {{showSampleList?'hide':'show'}}">
 		<view class="side ">
@@ -78,31 +86,31 @@
 
 
 	<!--隐藏式菜单-->
-	<view class="container {{showMenu?'show':'hide'}}">
+	<view class = "container {{showMenu?'show':'hide'}}">
 		<view class="tui-table-view">
-			<view class='tui-col-5' bindtap="tapshow" hover-class="menuHover">
+		<view class='tui-col-5' bindtap="tapshow" hover-class="menuHover">
 				<image class="img2" src="/images/residence.png"></image>
 				<view class="viewStyle">走进DI-NOC</view>
 			</view>
-			<view class='tui-col-5' bindtap="index" hover-class="menuHover">
+		<view class='tui-col-5' bindtap="index" hover-class="menuHover">
 				<image class="img2" src="/images/design.png"></image>
 				<view class="viewStyle">设计之选</view>
 			</view>
-			<view class='tui-col-5' bindtap="scene" hover-class="menuHover">
+		<view class='tui-col-5' bindtap="scene" hover-class="menuHover">
 				<image class="img2" src="/images/real.png"></image>
 				<view class="viewStyle">场景演示</view>
 			</view>
-			<view class='tui-col-5' bindtap="shopcar" hover-class="menuHover">
+		<view class='tui-col-5' bindtap="shopcar" hover-class="menuHover">
 				<image class="img2" src="/images/apply.png"></image>
 				<view class="viewStyle">花色申领</view>
 			</view>
-			<view class='tui-col-5' bindtap="home" hover-class="menuHover">
+		<view class='tui-col-5' bindtap="home" hover-class="menuHover">
 				<image class="img2" src="/images/person.png"></image>
 				<view class="viewStyle">个人主页</view>
 			</view>
-		</view>
+		</view>	
 	</view>
 
-	<image src="../../images/menu.png" class="buttom" animation="{{animMain}}" bindtap="showOrHide">
-	</image>
+	<image src="../../images/menu.png" class="buttom"  animation="{{animMain}}" bindtap="showOrHide">
+			</image>
 </view>

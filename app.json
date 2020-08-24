@@ -12,7 +12,10 @@
     "pages/register/register",
     "pages/collect/collect",
     "pages/scene/scene",
-    "pages/shopcar/shopcar"
+    "pages/shopcar/shopcar",
+    "pages/policy/policy",
+    "pages/agreement/agreement",
+    "pages/scene1/scene1"
   ],
   "window": {
     "backgroundTextStyle": "light",

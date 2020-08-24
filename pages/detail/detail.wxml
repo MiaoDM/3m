@@ -22,7 +22,7 @@
 	<!-- 占据顶部位置， 伪padding板块 -->
 </view>
 <view class="top">
-	<image class="img_top" src="{{img_detail_tp}}">
+	<image class="img_top" src="{{items.image}}">
 	</image>
 </view>
 
@@ -33,11 +33,11 @@
 </view>
 <!-- logo-end -->
 <view class="main">
-	<view class="title">材料名称</view>
+	<view class="title">{{items.name}}</view>
 	<view class="out">
-		<block wx:for="{{items}}" wx:key="*this">
-			<view class="content">{{item.name}}</view>
-		</block>
+		<view class="content">{{items.desc1}}</view>
+		<view class="content">{{items.desc2}}</view>
+		<view class="content">{{items.desc3}}</view>
 	</view>
 
 	<view class="box">

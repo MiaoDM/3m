@@ -1,4 +1,5 @@
 // pages/scene/scene.js
+const app = getApp();
 Page({
 
   /**
@@ -9,16 +10,7 @@ Page({
     currentIndex1: 0,
     currentIndex2: 0,
 
-    imagelist: [{
-        img: "http://47.101.147.253:2000/uploads/building.jpg"
-      },
-      {
-        img: "http://47.101.147.253:2000/uploads/office.jpg"
-      },
-      {
-        img: "http://47.101.147.253:2000/uploads/bedroom.jpg"
-      }
-    ],
+    imagelist: [],
   },
 
   //函数
@@ -51,7 +43,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getSenceList();
   },
 
   /**
@@ -196,5 +188,27 @@ Page({
       this.right();
     }
   },
-
+  getSenceList: function () {
+    var that = this;
+    wx.request({
+      url: app.config.apiUrl + '/Sence/getSenceList', // 拼接接口地址(前面为公共部分)
+      method: 'post',
+      header: {
+        'content-type': 'application/json'
+      },
+      success(res) {
+        if (res) {
+          that.setData({
+            imagelist: res.data,
+          }, )
+          console.log('next is sence')
+          console.log(res.data) // 打印查看是否请求到接口数据
+          // 开始获取数据 eg: textBox(获取文字内容)
+          textBox: res.data // 根据network查看请求到的接口的结构获取相对应的数据
+        } else {
+          console.log('没有数据')
+        }
+      }
+    })
+  },
 })

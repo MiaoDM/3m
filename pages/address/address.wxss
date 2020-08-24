@@ -17,6 +17,8 @@ page{
   display:flex;
   flex-direction: column; /*纵向*/
   justify-content: center;
+  position: absolute;
+  top: 200rpx;
   margin-left: 10%;
   margin-right: 10%;
   /*border: 1rpx solid;*/

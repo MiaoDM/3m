@@ -1,5 +1,5 @@
-// pages/detail/detail.js
-const app = getApp()
+// pages/scene1/scene1.js
+const app = getApp();
 
 Page({
 
@@ -7,14 +7,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    items: {},
+    imagelist: [],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getDetail(options.id);
+
   },
 
   /**
@@ -28,7 +28,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getSenceList();
   },
 
   /**
@@ -76,34 +76,23 @@ Page({
       url: '../index/index'
     })
   },
-  tapfavourite: function () {
-    console.log("tapfavourite");
-  },
-  tapshop: function () {
-    console.log("tapshop");
-  },
-  tapshow: function () {
-    console.log("tapshow");
-  },
-  getDetail:function(id){
+  getSenceList: function () {
     var that = this;
     wx.request({
-      url: app.config.apiUrl + '/Sample/getDetail',
+      url: app.config.apiUrl + '/Sence/getSenceList', // 拼接接口地址(前面为公共部分)
       method: 'post',
       header: {
         'content-type': 'application/json'
       },
-      data: {
-        id: id,
-      },
       success(res) {
         if (res) {
           that.setData({
-            items: res.data,
-          });
-          console.log('next is it')
-          console.log(that.data.items);
-          textBox: res.data 
+            imagelist: res.data,
+          }, )
+          console.log('next is sence')
+          console.log(res.data) // 打印查看是否请求到接口数据
+          // 开始获取数据 eg: textBox(获取文字内容)
+          textBox: res.data // 根据network查看请求到的接口的结构获取相对应的数据
         } else {
           console.log('没有数据')
         }

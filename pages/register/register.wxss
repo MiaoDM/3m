@@ -1,20 +1,33 @@
 /* pages/register/register.wxss */
 
 page {
-  background-image: url('http://47.101.147.253:4004/uploads/main-back.jpg');
+  background-image: url('http://47.101.147.253:4004/uploads/reg-bk.jpg');
   width: 100%;
-  height: 105%;
+  height: 100%;
   background-size: 100% 100%;
+}
+
+.logo {
+  position: fixed;
+  left: 10rpx;
+  top: 60rpx;
+  z-index: 10001;
+}
+
+.img_logo {
+  width: 450rpx;
+  height: 60rpx;
 }
 
 
 .info {
+  display: relative;
   width: 80%;
-  height: 60%;
+  height: 65%;
   background-color: #AAA7;
   border-radius: 5px;
   align-items: center;
-  display:flex;
+  display:block;
   flex-direction: column; /*纵向*/
   justify-content: center;
   margin-left: 10%;
@@ -22,9 +35,8 @@ page {
   /*border: 1rpx solid;*/
 }
 .row {
-  height: 50rpx;
   display: flex;
-  height: 14%;
+  height: 13%;
   align-items: center;
   justify-content: center;
   flex-direction: row; /*纵向*/
@@ -35,12 +47,27 @@ page {
 }
 
 .title{
-  margin-top:5% ;
+  height: 50rpx;
+  display: flex;
+  height: 14%;
   align-items: center;
   justify-content: center;
+  flex-direction: row; /*纵向*/
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  /*border: 1rpx solid;*/
+  border-radius: 10px;
   text-align: center;
   font-size: 40rpx;
   color: #FFF;
+}
+
+.titleimg{
+  margin-top:20% ;
+  width: 90%;
+  margin-left: 5%;
+  align-items: center;
+  justify-content: center;
 }
 
 .text{
@@ -88,20 +115,41 @@ page {
   text-align: center;
   border-radius: 5px;
   color: #FFF;
+  text-decoration:underline;
   /*border: 1rpx solid;*/
 }
 
 .button{
-  margin-top:5% ;
-  width: 200rpx;
+  height: 60rpx;
+  display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #333;
+  flex-direction: row; /*纵向*/
+  margin-left: 30%;
+  margin-right: 30%;
+  /*border: 1rpx solid;*/
+  border-radius: 10px;
   text-align: center;
-  border-radius: 5px;
   font-size: 32rpx;
   color: #FFF;
+  margin-top: 60rpx;
+  background-color: #333; 
 }
+
+.text3 {
+  height: 40%;
+  font-size: 32rpx;
+  text-align: center;
+  border-radius: 5px;
+  color: #FFF;
+  text-decoration:underline;
+  /*border: 1rpx solid;*/
+}
+
+.cb{
+  transform: scale(0.6,0.6);
+}
+
 
 
 

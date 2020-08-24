@@ -1,0 +1,62 @@
+/* pages/scene1/scene1.wxss */
+page {
+  background-image: url('http://47.101.147.253:4004/uploads/main-back.jpg');
+  width: 100%;
+  height: 35%;
+  background-size: 100% 100%;
+}
+
+.logo {
+  position: fixed;
+  left: 30rpx;
+  top: 40rpx;
+}
+
+.img_logo {
+  width: 450rpx;
+  height: 60rpx;
+}
+
+.item {
+  padding: 70rpx 0 50rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  padding: 10rpx 50rpx;
+  width: 750rpx;
+  height: 420rpx;
+  /* border: 1px solid red; */
+  position: relative;
+}
+
+.pic {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid green; */
+}
+
+.ceng {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  text-align: center;
+}
+.ceng .txt{
+  font-size: 34rpx;
+  width: 200rpx;
+  height: 50rpx;
+  border-radius: 5px;
+  background: #555B;
+}

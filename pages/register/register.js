@@ -10,8 +10,10 @@ Page({
     name:"",
     code:"",
     company:"",
-    openid:""
-
+    openid:"",
+    /*按钮*/
+    btn_disabled:true,
+    
   },
 
   /**
@@ -87,7 +89,7 @@ Page({
   },
 
    // 拿到验证码
-   getCode: function (e) {
+   getVCode: function (e) {
     var val = e.detail.value
     this.setData({
         code: val
@@ -132,7 +134,7 @@ Page({
       url: app.config.apiUrl + '/Account/GetVerificationCode', // 拼接接口地址(前面为公共部分)
       method: 'post',
       data: {
-        phone: tel,
+        telephone: tel,
       },
       header: {
         'content-type': 'application/json'
@@ -161,12 +163,12 @@ Page({
   },
 
 
-  Register:function()
-  {
-    this.GetVerificationCode(this.data.phone, this.data.name, this.data.company, this.data.code, this.data.openid);
+  UserRegister:function()
+  {  
+    this.UserRegReq(this.data.phone, this.data.name, this.data.company, this.data.code, 'this.data.openid');
   },
 
-  UserRegister: function (user_tel, user_name, user_company, user_code, use_openid) {
+  UserRegReq: function (user_tel, user_name, user_company, user_code, use_openid) {
     var that = this;
     wx.request({
       url: app.config.apiUrl + '/Account/RegUserInfo', // 拼接接口地址(前面为公共部分)
@@ -190,9 +192,13 @@ Page({
             title:"用户注册成功",
             })
             //跳转到首页
+            wx.reLaunch({
+              url: '/pages/index/index'
+            })
           }
           else
           {
+            console.log(res.data);
             wx.showToast({
               title:"用户注册失败",
               })
@@ -203,6 +209,35 @@ Page({
           })
         }
       }
+    })
+  },
+
+  /**相关协议 法律文件 */
+  /**是否同意协议 */
+  checkbox: function (e) {
+    //console.log(e.detail.value);
+    const values = e.detail.value
+    if (values.length == 2)
+    {
+      this.setData({
+        btn_disabled : false
+      })
+    }
+    else{
+      this.setData({
+        btn_disabled : true
+      })
+    }
+  },
+
+  policy1: function () {
+    wx.reLaunch({
+      url: '/pages/policy/policy'
+    })
+  },
+  policy2: function () {
+    wx.reLaunch({
+      url: '/pages/agreement/agreement'
     })
   },
 })

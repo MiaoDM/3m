@@ -1,12 +1,12 @@
 <!--pages/home/home.wxml-->
 <view class="inaver _30f2b4d" style="background:{{background}};color:{{getColor}}">
 	<!--返回按钮-->
-	<view class="left _30f2b4d" catchtap="goBack" style="position:absolute;top:120rpx;left:50rpx">
+	<view class="left _30f2b4d" catchtap="goBack" style="position:absolute;top:120rpx;left:20rpx">
 		<image class="icon _30f2b4d" src="../../images/back.png" />
 	</view>
 
 	<!--首页按钮-->
-	<view class="left _30f2b4d" catchtap="goHome" style="position:absolute;top:130rpx;right:50rpx">
+	<view class="left _30f2b4d" catchtap="goHome" style="position:absolute;top:130rpx;right:20rpx">
 		<image class="icon _30f2b4d" src="../../images/home.png" />
 	</view>
 

@@ -16,12 +16,12 @@
 .logo {
   position: fixed;
   left: 30rpx;
-  top: 40rpx;
+  top: 60rpx;
 }
 
 .img_logo {
-  width: 300rpx;
-  height: 100rpx;
+  width: 450rpx;
+  height: 60rpx;
 }
 
 .main {

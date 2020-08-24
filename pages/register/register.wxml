@@ -1,34 +1,70 @@
 <!--pages/register/register.wxml-->
 
-<view class="info" style="margin-top: 20%;">
+
+<!-- logo -->
+	<view class="logo">
+		<image class="img_logo" src="/images/logo.png">
+		</image>
+	</view>
+
+<image class="titleimg" src="../../images/title.png" mode="widthFix"></image>
+
+<view class="info" style="margin-top: 5%;">
 
 	<view class="title">用户注册</view>
 
 	<view class="row">
 		<image class="pic" src="../../images/person.png"></image>
 		<!--输入账号-->
-		<input class="input" type="number" placeholder="姓名" bindinput="idInput"></input>
+		<input class="input"  placeholder="姓名" bindinput="getName"></input>
 	</view>
 	<view class="row">
-		<image class="pic" src="../../images/person.png"></image>
-		<!--输入密码-->
+		<image class="pic" src="../../images/telephone.png"></image>
+		<!--输入电话号码-->
 		<input class="input" type="number" placeholder="电话" maxlength="11" bindinput="getPhone"></input>
 	</view>
 
 	<view class="row">
-		<image class="pic" src="../../images/person.png"></image>
-		<!--输入邮箱-->
+		<image class="pic" src="../../images/code.png"></image>
+		<!--输入验证码-->
 		<input class="input2"  placeholder="验证码" bindinput="getVCode"></input>
     <view class="text2" bindtap="getVC">获取验证码</view>
 	</view>
 
 	<view class="row">
-		<image class="pic" src="../../images/person.png"></image>
+		<image class="pic" src="../../images/company.png"></image>
 		<!--输入公司-->
-		<input class="input" placeholder="公司" bindinput="passwordInput"></input>
+		<input class="input" placeholder="公司" bindinput="getCompany"></input>
 	</view>
 
-	<view class="button" bindtap="UserRegister">确定</view>
+	<!--相关协议-->
 
+	<checkbox-group  bindchange="checkbox">
+				<view class="row" >
+				<checkbox class="cb" value="协议1" />
+				<text class = "text3" bindtap="policy1">同意3M隐私协议</text>    
+				</view >  
+
+				<view class="row">
+				<checkbox class="cb" value="协议2" />
+				<text class = "text3" bindtap="policy2">同意个人信息处理知情并同意书</text>    
+				</view >  
+
+	</checkbox-group>
+
+	<button class="button" type="primary" bindtap="UserRegister" disabled='{{btn_disabled}}'>确定</button>
+
+
+
+	<!--checkbox-group class="cu-bar" bindchange="boxcheck">
+    <checkbox name="box_check" value="{{if_checked}}" class="red round"></checkbox>
+    <navigator url="/pages/about/about">
+    我已阅读并同意<text class="text-blue">《加入协议加入协》</text>      
+    </navigator>
+  </checkbox-group-->  
+
+	
 </view>
+
+
 

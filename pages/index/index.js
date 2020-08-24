@@ -19,19 +19,7 @@ Page({
     currentIndex: 0,
     currentIndex1: 0,
     currentIndex2: 0,
-    posterList: [{
-        id: 0,
-        url: "http://47.101.147.253:2000/uploads/building.jpg"
-      },
-      {
-        id: 1,
-        url: "http://47.101.147.253:2000/uploads/office.jpg"
-      },
-      {
-        id: 2,
-        url: "http://47.101.147.253:2000/uploads/bedroom.jpg"
-      },
-      
+    posterList: [
     ],
 
 
@@ -215,6 +203,8 @@ Page({
                 url: '/pages/register/register'
               })*/
 
+              
+
               // 用户已经授权过,不需要显示授权页面,所以不需要改变 isHide 的值
               // 根据自己的需求有其他操作再补充
               // 我这里实现的是在用户授权成功后，调用微信的 wx.login 接口，从而获取code
@@ -253,6 +243,8 @@ Page({
 
   GetRegUserInfo: function (use_openid) {
     var that = this;
+
+    console.log("用户的openid:-------------");
     wx.request({
       url: app.config.apiUrl + '/Account/GetUserInfo', // 拼接接口地址(前面为公共部分)
       method: 'post',
@@ -270,6 +262,9 @@ Page({
             title:"获取用户信息成功",
             })
             //跳转到首页
+            that.setData({
+              isHide: false
+             });
           }
           else
           {
@@ -277,6 +272,9 @@ Page({
               title:"获取用户信息失败",
               })
             //跳转到注册页面
+            wx.reLaunch({
+              url: '/pages/register/register'
+            })
           }
        } else {
         wx.showToast({
@@ -295,10 +293,15 @@ Page({
      console.log("用户的信息如下：");
      console.log(e.detail.userInfo);
      //授权成功后,通过改变 isHide 的值，让实现页面显示出来，把授权页面隐藏起来
+
+     //授权成功后获取用户注册信息
+     this.GetRegUserInfo("1234567890");
+/*
      that.setData({
       isHide: false
-     });
-    } else {
+     });*/
+    } 
+    else {
      //用户按了拒绝按钮
      wx.showModal({
       title: '警告',
@@ -309,6 +312,7 @@ Page({
        // 用户没有授权成功，不需要改变 isHide 的值
        if (res.confirm) {
         console.log('用户点击了“返回授权”');
+        
        }
       }
      });
@@ -342,7 +346,7 @@ Page({
   },
   scene: function () {
     wx.reLaunch({
-      url: '/pages/scene/scene'
+      url: '/pages/scene1/scene1'
     })
   },
 

@@ -1,0 +1,16 @@
+<!--pages/policy/policy.wxml-->
+<view class="page" style="background-color: #333d">
+
+<!-- logo -->
+	<view class="logo">
+		<image class="img_logo" src="/images/logo.png">
+		</image>
+	</view>
+
+  <view class='title'>个人信息处理知情并同意书</view>
+  <view class='text'>3M尊重并保护用户个人信息。在您使用3M提供的“3M DI-NOC 至臻膜境”小程序服务（以下简称</view>
+  
+  <button class="button" type="primary" bindtap="Back2Register" disabled='{{btn_disabled}}'>确定</button>
+
+
+</view>

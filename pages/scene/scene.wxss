@@ -13,8 +13,8 @@ page{
 }
 
 .img_logo {
-  width: 300rpx;
-  height: 100rpx;
+  width: 450rpx;
+  height: 60rpx;
 }
 .title{
   margin-top:5% ;

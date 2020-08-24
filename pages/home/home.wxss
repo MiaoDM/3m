@@ -2,11 +2,11 @@
 .logo {
   position: fixed;
   left: 10rpx;
-  top: 40rpx;
+  top: 60rpx;
 }
 
 .img_logo {
-  width: 400rpx;
+  width: 450rpx;
   height: 60rpx;
 }
 .userinfo {
